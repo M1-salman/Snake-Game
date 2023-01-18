@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital@1&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background: url(../img/bg.jpg) no-repeat center bottom/cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    position: absolute;
+    top: .7vw;
+    font-family: 'Sofia Sans', sans-serif;
+    font-style: italic;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+
+}
+#board {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+    background: linear-gradient(#2fd7e9, #f2f225);
+    width: 38vw;
+    height: 40vw;
+    border: 2px solid black;
+}
+#start{
+    position: absolute;
+    top: 48px;
+    left: 80px;
+    padding: 2px 15px;
+    border-radius: 3px;
+    font-family: 'Sofia Sans', sans-serif;
+    transition: all 1s linear;
+    background-color: white;
+    color: green;
+    cursor: pointer;
+}
+#info_btn{
+    position: absolute;
+    top: 80px;
+    left: 80px;
+    padding: 1px 32px;
+    border-radius: 3px;
+    color: green;
+    background-color: white;
+    font-family: 'Sofia Sans', sans-serif;
+    cursor: pointer;
+}
+.info_Container{
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    opacity: 0;
+    height: 78px;
+    width: 240px;
+    border-radius: 3px;
+    color: green;
+    background-color: white;
+    font-family: 'Sofia Sans', sans-serif;
+    margin-top: 10px;
+    padding: 2px 5px;
+    transition: all .1s linear;
+}
+.info-ani{
+    
+    opacity: 1;
+}
+#scoreBox {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 35px;
+}
+
+#hiScoreBox {
+    position: absolute;
+    top: 60px;
+    right: 25px;
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 35px;
+}
+
+.head {
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 14px;
+}
+
+.snake {
+    background-color: purple;
+    border: 1px solid black;
+    border-radius: 14px;
+}
+
+.food {
+    background-color: yellow;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+@keyframes Food {
+    0%   {transform: scale(1);}
+    25%   {transform: scale(1.2);}
+  50%  {transform: scale(1.5);}
+  70%  {transform: scale(1.2);}
+  100% {transform: scale(1);}
+  }
